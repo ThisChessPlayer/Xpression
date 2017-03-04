@@ -3,7 +3,7 @@
     {
         "attributes": {
             "OrientationCorrection": "ROTATE_0",
-            "Labels": [
+            [
                 {
                     "Confidence": 98.93968963623047,
                     "Name": "People"
