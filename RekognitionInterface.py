@@ -34,6 +34,8 @@ def recognizeFaces(image_path):
 
   if(response['FaceDetails'] != []):
     response['FaceDetails'][0]['Landmarks'] = None
+  else:
+    response = None
 
   return response
 
