@@ -32,8 +32,15 @@ def recognizeFaces(image_path):
 
   response['ResponseMetadata'] = None
 
+  if(response['FaceDetails'] != []):
+    response['FaceDetails'][0]['Landmarks'] = None
+
   return response
 
-#response = recognizeFaces('imgs/test/img_1.jpg')
-#pp = pprint.PrettyPrinter(indent=4)
-#pp.pprint(response)
+pp = pprint.PrettyPrinter(indent=4)
+
+response = recognizeFaces('makeup2.jpg')
+pp.pprint(response)
+
+response = recognizeLabels('makeup.jpg')
+pp.pprint(response)
