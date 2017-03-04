@@ -1,11 +1,11 @@
 import boto3
 import pprint
 
-def recognizeImage(image_url):
+def recognizeImage(image_path):
   client = boto3.client('rekognition')
 
   # Our source image: http://i.imgur.com/OK8aDRq.jpg
-  with open(image_url, 'rb') as source_image:
+  with open(image_path, 'rb') as source_image:
       source_bytes = source_image.read()
 
   response = client.detect_labels(
@@ -14,6 +14,5 @@ def recognizeImage(image_url):
       },
       MaxLabels=123
   )
-  #pp = pprint.PrettyPrinter(indent=4)
-  #pp.pprint(response)
-  return response
+
+  return response['Labels']
