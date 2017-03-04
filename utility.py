@@ -1,7 +1,7 @@
 import boto3 as b3
 import pandas as pd
 import sys
-import TestRekognition
+import RekognitionInterface
 import os
 
 def getImageInfo(image_directory, images_list, index):
@@ -15,7 +15,7 @@ def getImageInfo(image_directory, images_list, index):
     if (not os.path.isfile(str(filename))):
         filename = image_directory + "/test/" + drivers_df['img'][index]
     imageInfo = {}
-    imageInfo['attributes'] = TestRekognition.recognizeImage(filename)
+    imageInfo['attributes'] = TestRekognition.recognizeLabels(filename)
     imageWrapper = []
     imageWrapper.append(drivers_df['subject'][index])
     imageInfo['subject'] = drivers_df['subject'][index]
