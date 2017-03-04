@@ -1,7 +1,7 @@
 import boto3 as b3
 import pandas as pd
 import sys
-#import TestRekognition
+import TestRekognition
 
 image_directory = sys.argv[1]
 images_list = sys.argv[2]
