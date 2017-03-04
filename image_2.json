@@ -1,0 +1,97 @@
+[
+    "p002",
+    {
+        "attributes": {
+            "OrientationCorrection": "ROTATE_0",
+            "Labels": [
+                {
+                    "Confidence": 98.37713623046875,
+                    "Name": "People"
+                },
+                {
+                    "Confidence": 98.377197265625,
+                    "Name": "Person"
+                },
+                {
+                    "Confidence": 98.2408676147461,
+                    "Name": "Human"
+                },
+                {
+                    "Confidence": 92.66006469726562,
+                    "Name": "Automobile"
+                },
+                {
+                    "Confidence": 92.66006469726562,
+                    "Name": "Car"
+                },
+                {
+                    "Confidence": 92.66006469726562,
+                    "Name": "Vehicle"
+                },
+                {
+                    "Confidence": 65.22059631347656,
+                    "Name": "Chair"
+                },
+                {
+                    "Confidence": 65.22059631347656,
+                    "Name": "Furniture"
+                },
+                {
+                    "Confidence": 64.0485610961914,
+                    "Name": "Child"
+                },
+                {
+                    "Confidence": 64.0485610961914,
+                    "Name": "Kid"
+                },
+                {
+                    "Confidence": 56.176055908203125,
+                    "Name": "Accessories"
+                },
+                {
+                    "Confidence": 52.321189880371094,
+                    "Name": "Hair"
+                },
+                {
+                    "Confidence": 52.321189880371094,
+                    "Name": "Haircut"
+                },
+                {
+                    "Confidence": 52.321189880371094,
+                    "Name": "Portrait"
+                },
+                {
+                    "Confidence": 51.905601501464844,
+                    "Name": "Baby"
+                },
+                {
+                    "Confidence": 51.58272933959961,
+                    "Name": "Face"
+                },
+                {
+                    "Confidence": 51.58272933959961,
+                    "Name": "Selfie"
+                },
+                {
+                    "Confidence": 51.51850509643555,
+                    "Name": "Head"
+                }
+            ],
+            "ResponseMetadata": {
+                "HTTPStatusCode": 200,
+                "HTTPHeaders": {
+                    "x-amzn-requestid": "947e9189-0100-11e7-a563-f5b302b116b8",
+                    "date": "Sat, 04 Mar 2017 17:32:46 GMT",
+                    "connection": "keep-alive",
+                    "content-length": "928",
+                    "content-type": "application/x-amz-json-1.1"
+                },
+                "RetryAttempts": 0,
+                "RequestId": "947e9189-0100-11e7-a563-f5b302b116b8"
+            }
+        },
+        "imgname": "img_25094.jpg",
+        "subject": "p002",
+        "classname": "c0"
+    }
+]

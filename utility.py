@@ -2,25 +2,25 @@ import boto3 as b3
 import pandas as pd
 import sys
 import TestRekognition
-import json
+import os
 
-image_directory = sys.argv[1]
-images_list = sys.argv[2]
+def getImageInfo(image_directory, images_list, index):
 
-drivers_df = pd.read_csv(images_list)
+    drivers_df = pd.read_csv(images_list)
 
-drivers_list = []
+    drivers_list = []
 
-for i in range(len(5)):#drivers_df['img'])):
-    #print(drivers_df['img'][i])#image_directory + "/" + image)
+    filename = image_directory + "/train/" + drivers_df['classname'][index] + "/"+ drivers_df['img'][index]
+    print(filename)
+    if (not os.path.isfile(str(filename))):
+        filename = image_directory + "/test/" + drivers_df['img'][index]
     imageInfo = {}
-    #imageInfo['attributes'] = recognizeImage(image_directory + "/" + drivers_df['img'][i])
+    imageInfo['attributes'] = TestRekognition.recognizeImage(filename)
     imageWrapper = []
-    imageWrapper[0] = drivers_df['subject'][i]
-    imageInfo['subject'] = drivers_df['subject'][i]
-    imageInfo['classname'] = drivers_df['classname'][i]
-    imageInfo['imgname'] = drivers_df['img'][i]
-    imageWrapper[1] = imageInfo
+    imageWrapper.append(drivers_df['subject'][index])
+    imageInfo['subject'] = drivers_df['subject'][index]
+    imageInfo['classname'] = drivers_df['classname'][index]
+    imageInfo['imgname'] = drivers_df['img'][index]
+    imageWrapper.append(imageInfo)
     print(imageWrapper)
-    with open('image_' + str(i), w) as outfile:
-        json.dumps(imageWrapper, outfile, indent=4)
+    return imageWrapper

@@ -1,0 +1,61 @@
+[
+    "p002",
+    {
+        "attributes": {
+            "OrientationCorrection": "ROTATE_0",
+            "Labels": [
+                {
+                    "Confidence": 98.93968963623047,
+                    "Name": "People"
+                },
+                {
+                    "Confidence": 98.9397201538086,
+                    "Name": "Person"
+                },
+                {
+                    "Confidence": 98.89417266845703,
+                    "Name": "Human"
+                },
+                {
+                    "Confidence": 62.42793655395508,
+                    "Name": "Automobile"
+                },
+                {
+                    "Confidence": 62.42793655395508,
+                    "Name": "Car"
+                },
+                {
+                    "Confidence": 62.42793655395508,
+                    "Name": "Vehicle"
+                },
+                {
+                    "Confidence": 51.44181823730469,
+                    "Name": "Portrait"
+                },
+                {
+                    "Confidence": 51.44181823730469,
+                    "Name": "Selfie"
+                },
+                {
+                    "Confidence": 50.51176071166992,
+                    "Name": "Female"
+                }
+            ],
+            "ResponseMetadata": {
+                "HTTPStatusCode": 200,
+                "HTTPHeaders": {
+                    "x-amzn-requestid": "9329d77f-0100-11e7-b1b9-01a26b086b3b",
+                    "date": "Sat, 04 Mar 2017 17:32:44 GMT",
+                    "connection": "keep-alive",
+                    "content-length": "490",
+                    "content-type": "application/x-amz-json-1.1"
+                },
+                "RetryAttempts": 0,
+                "RequestId": "9329d77f-0100-11e7-b1b9-01a26b086b3b"
+            }
+        },
+        "imgname": "img_44733.jpg",
+        "subject": "p002",
+        "classname": "c0"
+    }
+]

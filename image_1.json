@@ -1,0 +1,65 @@
+[
+    "p002",
+    {
+        "attributes": {
+            "OrientationCorrection": "ROTATE_0",
+            "Labels": [
+                {
+                    "Confidence": 98.60073852539062,
+                    "Name": "People"
+                },
+                {
+                    "Confidence": 98.60077667236328,
+                    "Name": "Person"
+                },
+                {
+                    "Confidence": 98.50341796875,
+                    "Name": "Human"
+                },
+                {
+                    "Confidence": 67.80501556396484,
+                    "Name": "Automobile"
+                },
+                {
+                    "Confidence": 67.80501556396484,
+                    "Name": "Car"
+                },
+                {
+                    "Confidence": 67.80501556396484,
+                    "Name": "Vehicle"
+                },
+                {
+                    "Confidence": 50.5546760559082,
+                    "Name": "Chair"
+                },
+                {
+                    "Confidence": 50.5546760559082,
+                    "Name": "Furniture"
+                },
+                {
+                    "Confidence": 50.536190032958984,
+                    "Name": "Portrait"
+                },
+                {
+                    "Confidence": 50.536190032958984,
+                    "Name": "Selfie"
+                }
+            ],
+            "ResponseMetadata": {
+                "HTTPStatusCode": 200,
+                "HTTPHeaders": {
+                    "x-amzn-requestid": "93d83f7e-0100-11e7-b229-73a4ccff9f77",
+                    "date": "Sat, 04 Mar 2017 17:32:45 GMT",
+                    "connection": "keep-alive",
+                    "content-length": "539",
+                    "content-type": "application/x-amz-json-1.1"
+                },
+                "RetryAttempts": 0,
+                "RequestId": "93d83f7e-0100-11e7-b229-73a4ccff9f77"
+            }
+        },
+        "imgname": "img_72999.jpg",
+        "subject": "p002",
+        "classname": "c0"
+    }
+]
