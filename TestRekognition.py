@@ -14,6 +14,5 @@ def recognizeImage(image_url):
       },
       MaxLabels=123
   )
-  #pp = pprint.PrettyPrinter(indent=4)
-  #pp.pprint(response)
-  return response
+
+  return response['Labels']
