@@ -25,9 +25,9 @@ def getImageInfo(drivers_df, image_directory, images_list, index):
     print(imageWrapper)
     return imageWrapper
 
-def makeCSV(image_directory, images_list, indexStart, indexEnd):
+def makeCSV(indexStart, indexEnd, image_directory=".", images_list="driver_imgs_list.csv"):
     drivers_df = pd.read_csv(images_list)
-    with open("output2.csv", 'w', newline='') as outfile:
+    with open("output14.csv", 'w', newline='') as outfile:
         writer = csv.writer(outfile)
         for i in range (indexStart, indexEnd):
             image = getImageInfo(drivers_df, image_directory, images_list, i)
