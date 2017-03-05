@@ -34,4 +34,32 @@ def makeCSV(indexStart, indexEnd, image_directory=".", images_list="driver_imgs_
             writer.writerow(image)
         #['id'].append(image[0])
         #imagedf['attributes'].append(image[1])
+
+def getTestImageInfo(drivers_df, image_directory, images_list, index):
+
+    #drivers_df = pd.read_csv(images_list)
+
+    filename = image_directory + "/test/" + drivers_df['img'][index]
+    print(filename)
+
+    imageInfo = {}
+    imageInfo['attributes'] = RekognitionInterface.recognizeLabels(filename)
+    imageWrapper = []
+    imageWrapper.append(drivers_df['subject'][index])
+    imageInfo['subject'] = drivers_df['subject'][index]
+    imageInfo['imgname'] = drivers_df['img'][index]
+    imageWrapper.append(json.dumps(imageInfo))
+    print(imageWrapper)
+    return imageWrapper
     
+def makeTestCSV(image_directory=".", images_list="test_imgs_list.csv"):
+    drivers_df = pd.read_csv(images_list)
+    with open("test_preprocess_output.csv", 'w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        for i in range (len(drivers_df['subject'])):
+            image = getTestImageInfo(drivers_df, image_directory, images_list, i)
+            writer.writerow(image)
+        #['id'].append(image[0])
+        #imagedf['attributes'].append(image[1])
+
+#makeTestCSV('imgs')

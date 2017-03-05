@@ -48,7 +48,28 @@ def write_to_csv(inputFile, outputFile):
           imageattributes[listOfAttribute.index(jsonRow['attributes'][i]['Name'])]=jsonRow['attributes'][i]['Confidence']
         writer.writerow(imageattributes)
 
+def write_test_to_csv(inputFile, outputFile):
+  with open(outputFile, 'w', newline='') as output:
+
+    writer = csv.writer(output)
+    listOfAttribute = list(CreateDictionary.find_unique_attributes(inputFile))
+    listOfAttribute.insert(0, 'img')
+    listOfAttribute.insert(0, 'subject')
+    writer.writerow(listOfAttribute)
+    with open(inputFile) as csvfile:
+      csvreader = csv.reader(csvfile)
+
+      for row in csvreader:
+        jsonRow = json.loads(row[1])
+        imageattributes = [0] *len(listOfAttribute)
+        imageattributes[0] = jsonRow['subject']
+        imageattributes[1] = jsonRow['imgname']
+        
+        for i in range(0, len(jsonRow['attributes'])):
+          imageattributes[listOfAttribute.index(jsonRow['attributes'][i]['Name'])]=jsonRow['attributes'][i]['Confidence']
+        writer.writerow(imageattributes)
 
 
+#write_to_csv('drivers.csv', 'labeledfeatures.csv')
 
-write_to_csv('output3.csv', 'finaldata.csv')
+#write_test_to_csv('test_preprocess_output.csv', 'test_features.csv')

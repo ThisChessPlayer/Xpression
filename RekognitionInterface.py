@@ -38,7 +38,7 @@ def recognizeFaces(image_path):
     response = None
 
   return response
-
+'''
 pp = pprint.PrettyPrinter(indent=4)
 
 response = recognizeFaces('makeup2.jpg')
@@ -46,3 +46,4 @@ pp.pprint(response)
 
 response = recognizeLabels('makeup.jpg')
 pp.pprint(response)
+'''

@@ -19,5 +19,5 @@ def find_unique_attributes(filename):
 
   return allUniqueAttributes
           
-find_unique_attributes('output3.csv')
+#find_unique_attributes('output3.csv')
 
