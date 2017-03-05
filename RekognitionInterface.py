@@ -14,6 +14,8 @@ def recognizeLabels(image_path):
       },
       MaxLabels=123
   )
+  pprint.pprint(response['Labels'], indent=4)
+
   return response['Labels']
 
 def recognizeFaces(image_path):

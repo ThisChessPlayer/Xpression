@@ -5,6 +5,7 @@ import RekognitionInterface
 import os
 import csv
 import json
+import pprint
 
 def getImageInfo(drivers_df, image_directory, images_list, index):
 
@@ -40,8 +41,7 @@ def getTestImageInfo(drivers_df, image_directory, images_list, index):
     #drivers_df = pd.read_csv(images_list)
 
     filename = image_directory + "/test/" + drivers_df['img'][index]
-    print(filename)
-
+    print('Image: ' + filename)
     imageInfo = {}
     imageInfo['attributes'] = RekognitionInterface.recognizeLabels(filename)
     imageWrapper = []
@@ -49,7 +49,6 @@ def getTestImageInfo(drivers_df, image_directory, images_list, index):
     imageInfo['subject'] = drivers_df['subject'][index]
     imageInfo['imgname'] = drivers_df['img'][index]
     imageWrapper.append(json.dumps(imageInfo))
-    print(imageWrapper)
     return imageWrapper
     
 def makeTestCSV(image_directory=".", images_list="test_imgs_list.csv"):
