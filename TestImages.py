@@ -3,7 +3,10 @@ import CreateImageFeatures
 import csv
 
 import os
-import pyodbc
+try:
+  import pyodbc
+except ImportError:
+  import odbc as pyodbc
 
 def format_sql_request(headerFileName, imageDataFileName):
   with open(headerFileName, 'r') as headerFile:
