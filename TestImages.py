@@ -30,7 +30,8 @@ def format_sql_request(headerFileName, imageDataFileName):
       #  writer = csv.writer(pairoutput)
       #  for row in imageData:
       #    writer.writerow(row)
-      conn = pyodbc.connect('DSN=HACKATHON;UID=hack10user;PASSWORD=Clymene64982')
+      #conn = pyodbc.connect('DRIVER={Teradata Database ODBC Driver 16.00};DSN=asterqueen.teradatalabs.net;UID=hack10user;PASSWORD=Clymene64982')
+      conn = pyodbc.connect('DRIVER={Aster ODBC Driver};SERVER=asterqueen.teradatalabs.net;PORT=2406;DATABASE=hackathon.image_inputs;UID=hack10user;PWD=Clymene64982')
 
       cursor = conn.cursor()
 
