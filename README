@@ -6,8 +6,9 @@
              / ^ \| |   | | | | |___ ___| |___| |_| |_| |_| | | | |             
             /_/ \_\_|   |_| |_|_____|_____|_____|_____|_____|_| |_|             
 --------------------------------------------------------------------------------
-Machine Learning application using AWS Rekognition and Teradata Aster used to classify drivers into one of ten categories, each representing different levels of distraction. Edit
-Add topics
+Machine Learning application using AWS Rekognition and Teradata Aster used to 
+classify drivers into one of ten categories, each representing different levels
+of distraction.
 --------------------------------------------------------------------------------
 Dependencies:
   - AWSCLI
